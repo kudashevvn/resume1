@@ -267,7 +267,7 @@ header {
 .nav__number {
   font-weight: 600;
   font-size: 24px;
-  line-height: 29px;
+  line-height: 27px;
   color: #333333;
   border-bottom: 1px solid;
 }
@@ -445,7 +445,7 @@ header {
 .main__mini-logo {
   position: absolute;
   left: 130px;
-  bottom: 73px;
+  bottom: 65px;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
@@ -901,7 +901,14 @@ body {
 }
 
 .events__title {
-  margin: 95px 0 60px 0;
+  margin: 97px 0 58px 0;
+}
+
+.events__subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 5px 0 15px 0;
 }
 
 .events__info {
@@ -909,7 +916,6 @@ body {
 }
 
 .events__wrapper-event {
-  max-width: 1106px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -919,13 +925,13 @@ body {
 }
 
 .events__event {
-  margin-bottom: 50px;
+  margin: 2px 35px 50px 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 50%;
-          flex: 1 0 50%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .events__img {
@@ -949,32 +955,25 @@ body {
   z-index: 1;
 }
 
-.events__subtitle {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-  margin-bottom: 15px;
-}
-
 .events__text {
   font-size: 16px;
   line-height: 21px;
 }
 
 .price {
-  margin: 0 auto 60px auto;
+  margin: 0 auto 101px auto;
 }
 
 .price__title {
-  padding-top: 50px;
+  padding-top: 55px;
 }
 
 .price__subtitle {
-  margin: 0 auto 60px auto;
+  margin: -3px auto 60px auto;
 }
 
-.price__room-title {
-  margin: 60px 0;
+.price__room-price {
+  margin: 63px 0 54px 0;
 }
 
 .price__room-subtitle {
@@ -1024,7 +1023,7 @@ body {
 .price__room p {
   font-size: 16px;
   line-height: 21px;
-  margin-bottom: 26px;
+  margin-bottom: 29px;
 }
 
 .price__room p:last-of-type {
@@ -1051,11 +1050,16 @@ body {
 }
 
 .auto {
-  margin-bottom: 130px;
+  margin-bottom: 45px;
+}
+
+.auto__title {
+  margin-bottom: 17px;
 }
 
 .auto__subtitle {
-  margin-bottom: 70px;
+  margin-bottom: 60px;
+  margin-left: 5px;
 }
 
 .auto__choise {
@@ -1064,7 +1068,7 @@ body {
 }
 
 .auto__liSubtitle {
-  margin: 0 0 35px 0;
+  margin: 32px 0 37px 0;
   text-align: left;
 }
 
@@ -1076,16 +1080,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-left: 10px;
+  margin-left: 55px;
 }
 
 .auto__param {
   font-size: 16px;
   line-height: 21px;
-  margin-bottom: 28px;
+  margin: 0 0 28px 2px;
 }
 
 .auto__param::before {
@@ -1094,7 +1095,11 @@ body {
 }
 
 .auto__btn {
-  margin-top: 7px;
+  margin: 7px 0 50px 0;
+}
+
+.slider__slide img {
+  margin: -17px 57px 0 0;
 }
 
 .slider__btns {
@@ -1159,7 +1164,7 @@ body {
 
 .slick-arrow {
   position: absolute;
-  top: 50%;
+  top: 51%;
   z-index: 10;
   font-size: 0;
   width: 20px;
@@ -1167,7 +1172,7 @@ body {
 }
 
 .slick-arrow.slick-prev {
-  left: 0;
+  left: 35px;
   background: url(../img/arrow.svg) 0 0 no-repeat;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
@@ -1175,7 +1180,7 @@ body {
 }
 
 .slick-arrow.slick-next {
-  right: 0;
+  right: 30px;
   background: url(../img/arrow.svg) 0 0 no-repeat;
 }
 
@@ -1224,6 +1229,189 @@ body {
 .slick-dots li.slick-active button {
   padding: 10px;
   border: 2px solid #FED100;
+}
+
+.reviews {
+  background: #FED100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reviews__title {
+  padding: 100px 0 43px 0;
+}
+
+.reviews__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.reviews__item {
+  max-width: 420px;
+  font-size: 16px;
+  line-height: 21px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+}
+
+.reviews__item:last-child {
+  margin-right: 0;
+}
+
+.reviews__all-reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.reviews__author {
+  text-align: start;
+}
+
+.reviews__info {
+  margin: 11px 0 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.rating__body {
+  position: relative;
+  margin: 2px 0 0 10px;
+}
+
+.rating__body::before {
+  content: "★★★★★";
+  display: block;
+  font-size: 24px;
+  color: #363636;
+}
+
+.rating__active {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.rating__active::before {
+  content: "★★★★★";
+  position: absolute;
+  width: 1000%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: #FF352B;
+  font-size: 24px;
+}
+
+.rating__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.ratiing__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  height: 100%;
+  opacity: 0;
+}
+
+.rating__value {
+  display: none;
+}
+
+.reviews__text {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.reviews__text_preview {
+  overflow: hidden;
+  max-width: 420px;
+  max-height: 147px;
+}
+
+.reviews__text_preview._active {
+  display: none;
+}
+
+.reviews__text_full {
+  display: none;
+  max-width: 420px;
+}
+
+.reviews__text_full._active {
+  display: block;
+}
+
+.reviews__btn {
+  font-size: 16px;
+  line-height: 21px;
+  color: #333333;
+  font-family: "Montserrat";
+  margin-top: 18px;
+  text-decoration: underline;
+}
+
+.reviews__btn_turn._active,
+.reviews__btn_read {
+  display: block;
+}
+
+.reviews__btn_turn,
+.reviews__btn_read._active {
+  display: none;
+}
+
+.reviews__item_all-reviews {
+  display: none;
+}
+
+.reviews__item_all-reviews._active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.reviews__item_all-reviews._active .reviews__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 32%;
+          flex: 0 1 32%;
+}
+
+.reviews-btn-all {
+  margin: 28px 0 95px 0;
+  width: 250px;
+  height: 50px;
+  color: #333333;
+  border: 1px solid;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
 }
 
 @media (min-width: 767px) {
@@ -1291,6 +1479,14 @@ body {
     min-width: 300px;
     min-height: 330px;
   }
+
+  .events__info {
+    margin-left: 25px;
+  }
+
+  .events__event {
+    margin: 2px 12px 30px 20px;
+  }
 }
 
 @media (max-width: 1306px) {
@@ -1345,7 +1541,7 @@ body {
     position: relative;
   }
 
-  .price__room-title {
+  .price__room-price {
     margin: 40px 0;
   }
 
@@ -1360,6 +1556,17 @@ body {
 
   .slider__slide {
     padding: 0 20px;
+  }
+
+  .reviews__author {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .reviews__item_all-reviews._active .reviews__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 47%;
+            flex: 0 1 47%;
   }
 }
 
@@ -1478,14 +1685,20 @@ body {
     line-height: 24px;
   }
 
+  .events__subtitle {
+    font-size: 16px;
+    line-height: 129.9%;
+    margin-bottom: 0;
+  }
+
   .events__info {
     margin-left: 15px;
   }
 
   .events__event {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 100%;
-            flex: 1 0 100%;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -1495,18 +1708,13 @@ body {
     margin: 0 0 0 20px;
   }
 
-  .events__subtitle {
-    font-size: 16px;
-    line-height: 129.9%;
-    margin-bottom: 0;
-  }
-
   .events__text {
     display: none;
   }
 
   .price {
     background: #F8FBFF;
+    margin: 0 auto 50px auto;
   }
 
   .price__subtitle {
@@ -1523,7 +1731,15 @@ body {
   }
 
   .auto {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
+  }
+
+  .auto__liSubtitle {
+    text-align: center;
+  }
+
+  .auto__params {
+    margin-left: 0;
   }
 
   .auto__param {
@@ -1578,6 +1794,12 @@ body {
   .slick-arrow {
     display: none;
   }
+
+  .reviews__item_all-reviews._active .reviews__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
 }
 
 @media (max-width: 720px) {
@@ -1606,11 +1828,23 @@ body {
   }
 
   .auto {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+  }
+
+  .slider__slide img {
+    margin: -17px 0 0 0;
   }
 
   .slider__btn {
     margin-right: 15px;
+  }
+
+  .rating__body::before {
+    font-size: 17px;
+  }
+
+  .rating__active::before {
+    font-size: 17px;
   }
 }
 

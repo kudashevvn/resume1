@@ -116,3 +116,85 @@ function mySlider(track) {
 	});
 }
 
+// Отзывы - показать все
+let reviews = document.querySelector('.reviews-btn-all');
+let allReviews = document.querySelector('.reviews__item_all-reviews');
+if (reviews){
+	reviews.addEventListener('click', function(e){
+		allReviews.classList.toggle('_active');
+	})
+}
+// Перемещение основных отзывов в "Показать все"
+let screen = window.innerWidth;
+let review767 = document.getElementById('reviews__item_767');
+let review1020 = document.getElementById('reviews__item_1020');
+let reviewsAll = document.getElementById('all-reviews');
+let fragment = document.createDocumentFragment();
+if (screen < 1020){
+	fragment.appendChild(review1020);
+	reviewsAll.appendChild(fragment);
+}
+if (screen < 767){
+	fragment.appendChild(review767);
+	reviewsAll.appendChild(fragment);
+}
+
+// Рейтинг в отзывах
+const ratings = document.querySelectorAll('.rating');
+if (ratings.length > 0){
+	initRatings();
+}
+function initRatings() {
+	let ratingActive, ratingValue;
+	for (let i = 0; i < ratings.length; i++){
+		const rating = ratings[i];
+		initRating(rating);
+	}
+	function initRating(rating) {
+		initRatingVars(rating);
+		setRatingActiveWeidth();
+	}
+	function initRatingVars(rating){
+		ratingActive = rating.querySelector('.rating__active');
+		ratingValue = rating.querySelector('.rating__value');
+	}
+	function setRatingActiveWeidth(i = ratingValue.innerHTML){
+		const ratingActiveWidth = i / 0.05;
+		ratingActive.style.width = `${ratingActiveWidth}%`;
+	}
+}
+
+// Показать отзыв полностью
+let reviewsTurn = document.querySelectorAll('.reviews__btn_turn');
+let reviewsRead = document.querySelectorAll('.reviews__btn_read');
+let reviewsPreview = document.querySelectorAll('.reviews__text_preview');
+let reviewsFull = document.querySelectorAll('.reviews__text_full');
+if (reviewsRead.length > 0){
+	readAll();
+}
+function readAll(){
+	for (let i = 0; i < reviewsRead.length; i++){
+		const reviewRead = reviewsRead[i];
+		const reviewTurn = reviewsTurn[i];
+		const preview = reviewsPreview[i];
+		const full = reviewsFull[i];
+		openReview(reviewRead, reviewTurn, preview, full);
+		turnReview(reviewTurn, reviewRead, preview, full);
+	}
+	function openReview(reviewRead, reviewTurn, preview, full) {
+		reviewRead.addEventListener('click', function(e){
+			reviewRead.classList.toggle('_active');
+			reviewTurn.classList.toggle('_active');
+			preview.classList.toggle('_active');
+			full.classList.toggle('_active');
+		})
+	}
+	function turnReview(reviewRead, reviewTurn, preview, full) {
+		reviewRead.addEventListener('click', function(e){
+			reviewRead.classList.toggle('_active');
+			reviewTurn.classList.toggle('_active');
+			preview.classList.toggle('_active');
+			full.classList.toggle('_active');
+		})
+	}
+}
