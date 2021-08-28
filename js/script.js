@@ -22,7 +22,7 @@ if (burger) {
 		burger.classList.toggle('_active');
 		menu.classList.toggle('_active');
 		document.body.classList.toggle('_lock');
-	});
+	});	
 }
 
 // Все варианты квартир
@@ -122,7 +122,6 @@ let allReviews = document.querySelector('.reviews__item_all-reviews');
 if (reviews){
 	reviews.addEventListener('click', function(e){
 		allReviews.classList.toggle('_active');
-		console.log('dsadas');
 	})
 }
 // Перемещение основных отзывов в "Показать все"
@@ -226,6 +225,9 @@ for (let link of links){
 	link.addEventListener('click', function(e){
 		e.preventDefault()
 		const id = link.getAttribute('href');
+		document.body.classList.remove('_lock');
+		burger.classList.remove('_active');
+		menu.classList.remove('_active');
 		document.querySelector(id).scrollIntoView({
 			behavior: 'smooth',
 			block: 'start'
