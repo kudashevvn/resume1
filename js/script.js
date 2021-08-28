@@ -122,6 +122,7 @@ let allReviews = document.querySelector('.reviews__item_all-reviews');
 if (reviews){
 	reviews.addEventListener('click', function(e){
 		allReviews.classList.toggle('_active');
+		console.log('dsadas');
 	})
 }
 // Перемещение основных отзывов в "Показать все"
@@ -197,4 +198,37 @@ function readAll(){
 			full.classList.toggle('_active');
 		})
 	}
+}
+
+// Наличие согласия на обработку персональных данных
+let agree = document.querySelector('.checkbox__input');
+let checkbox = document.querySelector('.checkbox');
+let checkInput = document.querySelectorAll('.call__input');
+let checkBtn = document.querySelector('.call__btn');
+
+if (checkbox){
+	agree.addEventListener('click', function(e){
+		if (agree.hasAttribute('checked') === true){
+			checkBtn.setAttribute('disabled', 'disabled');
+			checkInput.forEach(i => i.setAttribute('disabled', 'disabled'));
+			agree.removeAttribute('checked');
+			return
+		} else if (agree.hasAttribute('checked') === false){
+			checkBtn.removeAttribute('disabled');
+			checkInput.forEach(i => i.removeAttribute('disabled'));
+			agree.setAttribute('checked', 'checked');
+		}
+	})
+}
+// Сколл по странице
+let links = document.querySelectorAll('a[href^="#"]');
+for (let link of links){
+	link.addEventListener('click', function(e){
+		e.preventDefault()
+		const id = link.getAttribute('href');
+		document.querySelector(id).scrollIntoView({
+			behavior: 'smooth',
+			block: 'start'
+		})
+	})
 }
