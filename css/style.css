@@ -410,20 +410,14 @@ header {
   position: absolute;
   width: 136px;
   height: 136px;
-  background: rgba(61, 155, 233, 0.3);
   border-radius: 50%;
   right: 15px;
   bottom: 40px;
   -webkit-transition: 0.5s ease 0.1s;
   -o-transition: 0.5s ease 0.1s;
   transition: 0.5s ease 0.1s;
-}
-
-.phone:hover {
-  -webkit-transition: 0.5s ease 0.1s;
-  -o-transition: 0.5s ease 0.1s;
-  transition: 0.5s ease 0.1s;
-  background: none;
+  -webkit-animation: blue-phone 3s infinite;
+          animation: blue-phone 3s infinite;
 }
 
 .phone__blue {
@@ -441,9 +435,37 @@ header {
 
 .phone__blue:hover {
   background: #3d9be9;
-  -webkit-transition: 0.5s ease 0.1s;
-  -o-transition: 0.5s ease 0.1s;
-  transition: 0.5s ease 0.1s;
+  -webkit-transition: 0.5s ease 0.1s alternate;
+  -o-transition: 0.5s ease 0.1s alternate;
+  transition: 0.5s ease 0.1s alternate;
+}
+
+@-webkit-keyframes blue-phone {
+  0% {
+    background: rgba(61, 155, 233, 0.3);
+  }
+
+  50% {
+    background: none;
+  }
+
+  100% {
+    background: rgba(61, 155, 233, 0.3);
+  }
+}
+
+@keyframes blue-phone {
+  0% {
+    background: rgba(61, 155, 233, 0.3);
+  }
+
+  50% {
+    background: none;
+  }
+
+  100% {
+    background: rgba(61, 155, 233, 0.3);
+  }
 }
 
 .phone__img {
@@ -912,9 +934,23 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transform: translate(0px, 120%);
+      -ms-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.events__event._active {
+  -webkit-transform: translate(0px, 0%);
+      -ms-transform: translate(0px, 0%);
+          transform: translate(0px, 0%);
+  opacity: 1;
 }
 
 .events__img {
@@ -1258,10 +1294,24 @@ body {
   line-height: 21px;
   margin-right: 15px;
   margin-bottom: 30px;
+  -webkit-transform: translate(0px, 120%);
+      -ms-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 
 .reviews__item:last-child {
   margin-right: 0;
+}
+
+.reviews__item._active {
+  -webkit-transform: translate(0px, 0%);
+      -ms-transform: translate(0px, 0%);
+          transform: translate(0px, 0%);
+  opacity: 1;
 }
 
 .reviews__all-reviews {
@@ -1634,7 +1684,6 @@ body {
 
 .social__logo:hover {
   border-radius: 5px;
-  background: #FF352B;
 }
 
 .maket {
