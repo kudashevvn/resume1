@@ -121,7 +121,7 @@ h6 {
 }
 */
 body {
-  color: #000;
+  color: #3A3A3A;
 }
 body._lock {
   overflow: hidden;
@@ -135,10 +135,10 @@ body._lock {
   flex-direction: column;
 }
 ._container {
-  max-width: 1236px;
+  max-width: 1240px;
   margin: 0 auto;
 }
-@media (max-width: 1248px) {
+@media (max-width: 1252px) {
   ._container {
     max-width: 970px;
   }
