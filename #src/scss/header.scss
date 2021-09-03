@@ -1,5 +1,52 @@
 //====================================================================================================
 
+.header {
+}
+.header__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+._container {
+}
+.header__logo {
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 29 / 24 * 100%;
+}
+.header__menu {
+}
+.menu-header {
+}
+.menu-header__items {
+	display: flex;
+}
+.menu-header__item {
+}
+.menu-header__link {
+}
+.header__search {
+}
+.search-form {
+}
+.search-form__icon {
+}
+.search-form__item {
+}
+.search-form__btn {
+}
+.search-form__input {
+}
+.header__user {
+}
+.user-header {
+	display: flex;
+}
+.user-header__link {
+}
+.user-header__img {
+	max-height: 130px;
+}
 //====================================================================================================
 
 /*

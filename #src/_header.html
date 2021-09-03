@@ -9,12 +9,19 @@
 			</ul>
 		</nav>
 		<div class="header__search">
-			<form action="#" method="get" placeholder="Search for minimalist chair"></form>
+			<div class="search-form">
+				<button type="button" class="search-form__icon"><img src="img/iconsfont/search.svg" alt="Search"></button>
+				<form action="#" class="search-form__item">
+					<button type="submit" class="search-form__btn"></button>
+					<input type="text" autocomplete="off" name="form[]" data-value="Search for minimalist chair" class="search-form__input">
+				</form>
+			</div>
+			
 		</div>
-		<div class="header__user">
-			<a href=""><img src="img/iconsfont/favorite.svg" alt="Favorite products"></a>
-			<a href=""><img src="img/iconsfont/cart.svg" alt="Basket"></a>
-			<a href=""><img src="img/avatar.jpg" alt="Basket"></a>
+		<div class="header__user user-header">
+			<a class="user-header__link" href="#"><img class="user-header__img" src="img/iconsfont/favorite.svg" alt="Favorite products"></a>
+			<a class="user-header__link" href="#"><img class="user-header__img" src="img/iconsfont/cart.svg" alt="Basket"></a>
+			<a class="user-header__link" href="#"><img class="user-header__img" src="img/avatar.jpg" alt="Basket"></a>
 		</div>
 	</div>
 </header>

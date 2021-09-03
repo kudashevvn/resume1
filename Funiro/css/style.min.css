@@ -776,6 +776,30 @@ body.ie ._ibg img {
   background: url("../img/icons/close.svg") 0 0 no-repeat;
 }
 
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 120.8333333333%;
+}
+
+.menu-header__items {
+  display: flex;
+}
+
+.user-header {
+  display: flex;
+}
+
+.user-header__img {
+  max-height: 130px;
+}
+
 /*
 //Burger
 .icon-menu {
